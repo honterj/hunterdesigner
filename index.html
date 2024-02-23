@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 	<link rel="stylesheet" href="estilos.css">
-
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     * {
       margin: 0;
@@ -192,6 +192,8 @@ body {
   background-color: #000000;
 }
 
+
+
 </style>
 
 </head>
@@ -238,13 +240,13 @@ body {
       </footer>
     </div>
     <div class="gallery">
-      <!-- Aquí puedes cambiar las imágenes que quieres mostrar en cada opción del menú -->
-      <!-- Por ejemplo, para la opción Inicio, he puesto las imágenes img1, img2 y img3 -->
-      <!-- Puedes cambiarlas por las que quieras, siempre que estén en la misma carpeta que el archivo HTML -->
-      <img src="img1.png" alt="Image 1">
-      <img src="img2.png" alt="Image 2">
-      <img src="img3.jpg" alt="Image 3">
-      <img src="img4.jpg" alt="Image 7">
+      <img src="img1.png" alt="Image 1" style="width: auto; height: 100vh;" >
+      <div id="tooltip"></div>
+      <img src="img2.png" alt="Image 2" style="width: auto; height: 100vh;" >
+      <img src="img3.jpg" alt="Image 3" style="width: auto; height: 100vh;" >
+      <div id="tooltip"></div>
+      <img src="img4.jpg" alt="Image 7" style="width: auto; height: 100vh;">
+      <div id="tooltip"></div>   
     </div>
     </div>
     
@@ -277,8 +279,8 @@ body {
           case "Inicio":
             // For the Inicio option, show the images img1, img2 and img3
             gallery.innerHTML = `
-            <img src="img1.jpg" alt="Image 1">
-            <img src="img2.jpg" alt="Image 2">
+            <img src="img1.png" alt="Image 1">
+            <img src="img2.png" alt="Image 2">
             <img src="img3.jpg" alt="Image 3">
             <img src="img4.jpg" alt="Image 7">
               `;
@@ -363,64 +365,64 @@ body {
             // For the Contacto option, show the formulario.html file
             gallery.innerHTML = `
             <img src="img/carretra/1.png" alt="Image 1">
-<img src="img/carretra/2.png" alt="Image 2">
-<img src="img/carretra/3.png" alt="Image 3">
-<img src="img/carretra/4.png" alt="Image 4">
-<img src="img/carretra/5.png" alt="Image 5">
-<img src="img/carretra/6.png" alt="Image 6">
-<img src="img/carretra/7.png" alt="Image 7">
-<img src="img/carretra/8.png" alt="Image 8">
-<img src="img/carretra/9.png" alt="Image 9">
-<img src="img/carretra/10.png" alt="Image 10">
-<img src="img/carretra/11.png" alt="Image 11">
-<img src="img/carretra/12.png" alt="Image 12">
-<img src="img/carretra/13.png" alt="Image 13">
-<img src="img/carretra/14.png" alt="Image 14">
-<img src="img/carretra/15.png" alt="Image 15">
-<img src="img/carretra/16.png" alt="Image 16">
-<img src="img/carretra/17.png" alt="Image 17">
-<img src="img/carretra/18.png" alt="Image 18">
-<img src="img/carretra/19.png" alt="Image 19">
-<img src="img/carretra/20.png" alt="Image 20">
-<img src="img/carretra/21.png" alt="Image 21">
-<img src="img/carretra/22.png" alt="Image 22">
-<img src="img/carretra/23.png" alt="Image 23">
-<img src="img/carretra/24.png" alt="Image 24">
-<img src="img/carretra/25.png" alt="Image 25">
+            <img src="img/carretra/2.png" alt="Image 2">
+            <img src="img/carretra/3.png" alt="Image 3">
+            <img src="img/carretra/4.png" alt="Image 4">
+            <img src="img/carretra/5.png" alt="Image 5">
+            <img src="img/carretra/6.png" alt="Image 6">
+            <img src="img/carretra/7.png" alt="Image 7">
+            <img src="img/carretra/8.png" alt="Image 8">
+            <img src="img/carretra/9.png" alt="Image 9">
+            <img src="img/carretra/10.png" alt="Image 10">
+            <img src="img/carretra/11.png" alt="Image 11">
+            <img src="img/carretra/12.png" alt="Image 12">
+            <img src="img/carretra/13.png" alt="Image 13">
+            <img src="img/carretra/14.png" alt="Image 14">
+            <img src="img/carretra/15.png" alt="Image 15">
+            <img src="img/carretra/16.png" alt="Image 16">
+            <img src="img/carretra/17.png" alt="Image 17">
+            <img src="img/carretra/18.png" alt="Image 18">
+            <img src="img/carretra/19.png" alt="Image 19">
+            <img src="img/carretra/20.png" alt="Image 20">
+            <img src="img/carretra/21.png" alt="Image 21">
+            <img src="img/carretra/22.png" alt="Image 22">
+            <img src="img/carretra/23.png" alt="Image 23">
+            <img src="img/carretra/24.png" alt="Image 24">
+            <img src="img/carretra/25.png" alt="Image 25">
             `;
             break;
             case "Animes":
             // For the Contacto option, show the formulario.html file
             gallery.innerHTML = `
             <img src="img/animes/1.png" alt="Image 1">
-<img src="img/animes/2.png" alt="Image 2">
-<img src="img/animes/3.png" alt="Image 3">
-<img src="img/animes/4.png" alt="Image 4">
-<img src="img/animes/5.png" alt="Image 5">
-<img src="img/animes/6.png" alt="Image 6">
-<img src="img/animes/7.png" alt="Image 7">
-<img src="img/animes/8.png" alt="Image 8">
-<img src="img/animes/9.png" alt="Image 9">
-<img src="img/animes/10.png" alt="Image 10">
-<img src="img/animes/11.png" alt="Image 11">
-<img src="img/animes/12.png" alt="Image 12">
-<img src="img/animes/13.png" alt="Image 13">
-<img src="img/animes/14.png" alt="Image 14">
-<img src="img/animes/15.png" alt="Image 15">
-<img src="img/animes/16.png" alt="Image 16">
-<img src="img/animes/17.png" alt="Image 17">
-<img src="img/animes/18.png" alt="Image 18">
-<img src="img/animes/19.png" alt="Image 19">
-<img src="img/animes/20.png" alt="Image 20">
-<img src="img/animes/21.png" alt="Image 21">
-<img src="img/animes/22.png" alt="Image 22">
-<img src="img/animes/23.png" alt="Image 23">
-<img src="img/animes/24.png" alt="Image 24">
-<img src="img/animes/25.png" alt="Image 25">
-<img src="img/animes/26.png" alt="Image 26">
-<img src="img/animes/27.png" alt="Image 27">
-<img src="img/animes/28.png" alt="Image 28">
-<img src="img/animes/29.png" alt="Image 29">
+            <img src="img/animes/2.png" alt="Image 2">
+            <img src="img/animes/3.png" alt="Image 3">
+            <img src="img/animes/4.png" alt="Image 4">
+            <img src="img/animes/5.png" alt="Image 5">
+            <img src="img/animes/6.png" alt="Image 6">
+            <img src="img/animes/7.png" alt="Image 7">
+            <img src="img/animes/8.png" alt="Image 8">
+            <img src="img/animes/9.png" alt="Image 9">
+            <img src="img/animes/10.png" alt="Image 10">
+            <img src="img/animes/11.png" alt="Image 11">
+            <img src="img/animes/12.png" alt="Image 12">
+            <img src="img/animes/13.png" alt="Image 13">
+            <img src="img/animes/14.png" alt="Image 14">
+            <img src="img/animes/15.png" alt="Image 15">
+            <img src="img/animes/16.png" alt="Image 16">
+            <img src="img/animes/17.png" alt="Image 17">
+            <img src="img/animes/18.png" alt="Image 18">
+            <img src="img/animes/19.png" alt="Image 19">
+            <img src="img/animes/20.png" alt="Image 20">
+            <img src="img/animes/21.png" alt="Image 21">
+            <img src="img/animes/22.png" alt="Image 22">
+            <img src="img/animes/23.png" alt="Image 23">
+            <img src="img/animes/24.png" alt="Image 24">
+            <img src="img/animes/25.png" alt="Image 25">
+            <img src="img/animes/26.png" alt="Image 26">
+            <img src="img/animes/27.png" alt="Image 27">
+            <img src="img/animes/28.png" alt="Image 28">
+            <img src="img/animes/29.png" alt="Image 29">
             
             `;
             break;
@@ -429,17 +431,17 @@ body {
             // For the Contacto option, show the formulario.html file
             gallery.innerHTML = `
             <img src="img/evomorales/1.png" alt="Image 1">
-<img src="img/evomorales/2.png" alt="Image 2">
-<img src="img/evomorales/3.png" alt="Image 3">
-<img src="img/evomorales/4.png" alt="Image 4">
-<img src="img/evomorales/5.png" alt="Image 5">
-<img src="img/evomorales/6.png" alt="Image 6">
-<img src="img/evomorales/7.png" alt="Image 7">
-<img src="img/evomorales/8.png" alt="Image 8">
-<img src="img/evomorales/9.png" alt="Image 9">
-<img src="img/evomorales/10.png" alt="Image 10">
-<img src="img/evomorales/11.png" alt="Image 11">
-<img src="img/evomorales/12.png" alt="Image 12">
+            <img src="img/evomorales/2.png" alt="Image 2">
+            <img src="img/evomorales/3.png" alt="Image 3">
+            <img src="img/evomorales/4.png" alt="Image 4">
+            <img src="img/evomorales/5.png" alt="Image 5">
+            <img src="img/evomorales/6.png" alt="Image 6">
+            <img src="img/evomorales/7.png" alt="Image 7">
+            <img src="img/evomorales/8.png" alt="Image 8">
+            <img src="img/evomorales/9.png" alt="Image 9">
+            <img src="img/evomorales/10.png" alt="Image 10">
+            <img src="img/evomorales/11.png" alt="Image 11">
+            <img src="img/evomorales/12.png" alt="Image 12">
 
 
             `;
@@ -478,6 +480,8 @@ body {
       // Hide the modal
       modal.style.display = "none";
     });
+
+
   </script>
 
 
