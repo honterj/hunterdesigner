@@ -31,7 +31,7 @@
       list-style: none;
       text-align: center;
       font-family: Arial, sans-serif;
-      font-size: 18px;
+      font-size: 14px;
       color: white;
     }
 
@@ -198,7 +198,7 @@ body {
   <div class="container">
     <div class="menu">
       <div style="margin-top: 10px; text-align: center;">
-      <img src="foto.jpg" alt="Descripción de la imagen" style="width: 16vh; height: auto; display: block; margin: 0 auto;">
+      <img src="foto.jpg" alt="Descripción de la imagen" style="width: 12vh; height: auto; display: block; margin: 56 auto;">
       </div>
       <h1>Diseñador Gráfico</h1>
       <h2></h2>
@@ -242,8 +242,8 @@ body {
       <img src="img1.png" alt="Image 1" style="width: auto; height: 100vh;" >
       <img src="img2.png" alt="Image 2" style="width: auto; height: 100vh;" >
       <img src="img3.jpg" alt="Image 3" style="width: auto; height: 100vh;" >
-      <img src="img4.jpg" alt="Image 7" style="width: auto; height: 100vh;">
-      
+      <img src="img4.jpg" alt="Image 7" style="width: auto; height: 100vh;" onmouseover="showMessage()" onmouseout="hideMessage()">
+            <p id="imageMessage" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px;">¡Mensaje sobre la imagen!</p>
     </div>
     </div>
     
@@ -473,6 +473,13 @@ body {
       modal.style.display = "none";
     });
 
+    function showMessage() {
+    document.getElementById("imageMessage").style.display = "block";
+  }
+
+  function hideMessage() {
+    document.getElementById("imageMessage").style.display = "none";
+  }
 
   </script>
 
