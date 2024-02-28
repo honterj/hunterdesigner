@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Videos</title>
+    <style>
+        /* Estilos CSS para los botones */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Fondo negro */
+            overflow: hidden; /* Evita el desbordamiento del video */
+        }
+        
+        #video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 para video responsive */
+            height: 0;
+        }
+        
+        #video-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70vh; /* Altura del video en una pantalla de TV */
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        
+        button {
+            padding: 4px 10px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Contenedor para el video -->
+    <div id="video-container">
+        <iframe id="video-iframe" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Botones de control -->
+    <div class="controls">
+        <button id="anterior">Anterior</button>
+        <button id="btnPaginaPrincipal" onclick="window.location.href = 'index.html'">Ir a Página Principal</button>
+        <button id="siguiente">Siguiente</button>
+        
+    </div>
+    </div>
+
+    <!-- Scripts para controlar los videos -->
+    <script>
+        const videos = [
+            "https://ok.ru/videoembed/5828617046755",
+            "https://ok.ru/videoembed/5828616981219",
+            "https://ok.ru/videoembed/5828616915683",
+            "https://ok.ru/videoembed/5828617112291"
+        ];
+        let currentVideoIndex = 0;
+
+        const videoIframe = document.getElementById("video-iframe");
+        const btnAnterior = document.getElementById("anterior");
+        const btnSiguiente = document.getElementById("siguiente");
+
+        function cargarVideo(index) {
+            videoIframe.src = videos[index];
+        }
+
+        btnAnterior.addEventListener("click", () => {
+            currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+            cargarVideo(currentVideoIndex);
+        });
+
+        btnSiguiente.addEventListener("click", () => {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            cargarVideo(currentVideoIndex);
+        });
+
+        // Cargar el primer video al cargar la página
+        cargarVideo(currentVideoIndex);
+    </script>
+</body>
+</html>
